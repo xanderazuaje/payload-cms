@@ -1,6 +1,5 @@
 import { CollectionConfig } from "payload/types";
-import {isAdmin, isAdminFieldLevel, isAdminOrSelf, postsPolicyAccess, postsPolicyEdit} from "../acess";
-import payload from "payload";
+import {isAdminFieldLevel, isAdminOrSelf, postsPolicyAccess, postsPolicyEdit} from "../acess";
 
 const Posts: CollectionConfig = {
     slug: "posts",

@@ -1,6 +1,4 @@
-import {CollectionConfig, PayloadRequest} from 'payload/types';
-import {isAdminFieldLevel, isAdminOrSelf} from "../acess";
-import {request} from "express";
+import {CollectionConfig} from 'payload/types';
 
 const Media: CollectionConfig = {
     slug: 'media',

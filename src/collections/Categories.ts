@@ -1,6 +1,5 @@
 import { CollectionConfig } from "payload/types";
-import {isAdmin, isAdminOrSelf, postsPolicyAccess} from "../acess";
-import {timestamp} from "payload/dist/utilities/timestamp";
+import {isAdmin} from "../acess";
 
 const Categories: CollectionConfig = {
     slug: "categories",
