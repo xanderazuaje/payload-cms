@@ -37,15 +37,6 @@ const Posts: CollectionConfig = {
             required: true
         },
         {
-            name: 'views',
-            type: 'number',
-            defaultValue: 0,
-            hidden: true,
-            access: {
-                update: ({ req: {user} }) => !user,
-            },
-        },
-        {
             name: 'content',
             label: 'Contenido',
             type: 'richText',
