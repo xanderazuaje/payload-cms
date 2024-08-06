@@ -22,7 +22,14 @@ const Users: CollectionConfig = {
   fields: [
     {
       name: 'name',
-      type: 'text'
+      label: 'nombre',
+      type: 'text',
+      required: true
+    },
+    {
+      name: 'description',
+      label: 'descripción',
+      type: 'textarea'
     },
     {
       name: 'pfp',
