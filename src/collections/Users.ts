@@ -1,5 +1,6 @@
 import {CollectionConfig} from 'payload/types'
 import {isAdmin, isAdminFieldLevel, isAdminOrSelf} from "../acess";
+import {adjectives, colors, Config, names, uniqueNamesGenerator} from "unique-names-generator";
 
 const Users: CollectionConfig = {
   slug: 'users',
@@ -22,13 +23,21 @@ const Users: CollectionConfig = {
   fields: [
     {
       name: 'name',
-      label: 'nombre',
+      label: 'Nombre',
       type: 'text',
-      required: true
+      required: true,
+      defaultValue: () => {
+        const config: Config = {
+          dictionaries: [names, colors, adjectives],
+          separator: ' ',
+          length: 2
+        }
+        return uniqueNamesGenerator(config)
+      }
     },
     {
       name: 'description',
-      label: 'descripción',
+      label: 'Descripción',
       type: 'textarea'
     },
     {

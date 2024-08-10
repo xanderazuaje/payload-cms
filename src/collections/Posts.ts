@@ -1,5 +1,6 @@
 import { CollectionConfig } from "payload/types";
 import {isAdminFieldLevel, isAdminOrSelf, postsPolicyAccess, postsPolicyEdit} from "../acess";
+import {slateEditor} from "@payloadcms/richtext-slate";
 
 const Posts: CollectionConfig = {
     slug: "posts",
@@ -40,6 +41,23 @@ const Posts: CollectionConfig = {
             name: 'content',
             label: 'Contenido',
             type: 'richText',
+            editor: slateEditor({
+                admin: {
+                    elements: [
+                        'h2',
+                        'h3',
+                        'h4',
+                        'link',
+                        'blockquote',
+                        'upload'
+                    ],
+                    leaves: [
+                        'bold',
+                        'italic',
+                        'strikethrough'
+                    ]
+                }
+            }),
             required: true,
         },
         {
